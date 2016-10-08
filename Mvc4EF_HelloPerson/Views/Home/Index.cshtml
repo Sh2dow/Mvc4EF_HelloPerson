@@ -1,0 +1,11 @@
+﻿@model Mvc4EF_HelloPerson.Models.Person
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="container">
+    @Html.Partial("_CreatePartial")
+</div>
+
+@*@Ajax.ActionLink("Clear", "Index", "Home", new { }, new AjaxOptions { UpdateTargetId = "container" })*@

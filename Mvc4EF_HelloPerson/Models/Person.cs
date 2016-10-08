@@ -1,20 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
 
 namespace Mvc4EF_HelloPerson.Models
 {
     public class Person
     {
-        public int PersonId { get; set; }
-
-        [Required]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DisplayName ("First Name"), Required]
         public string FirstName { get; set; }
-        [Required]
+        [DisplayName("Last Name"), Required]
         public string LastName { get; set; }
-        [Required]
+        [DisplayName("Middle Name"), Required]
         public string MiddleName { get; set; }
     }
 }
